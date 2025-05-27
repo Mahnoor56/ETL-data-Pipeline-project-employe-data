@@ -1,0 +1,12 @@
+[
+  {"name": "employee_id", "type": "STRING", "mode": "REQUIRED"},
+  {"name": "first_name", "type": "STRING", "mode": "NULLABLE"},
+  {"name": "last_name", "type": "STRING", "mode": "NULLABLE"},
+  {"name": "job_title", "type": "STRING", "mode": "NULLABLE"},
+  {"name": "department", "type": "STRING", "mode": "NULLABLE"},
+  {"name": "email", "type": "STRING", "mode": "NULLABLE"},
+  {"name": "address", "type": "STRING", "mode": "NULLABLE"},
+  {"name": "phone_number", "type": "STRING", "mode": "NULLABLE"},
+  {"name": "salary", "type": "INTEGER", "mode": "NULLABLE"},
+  {"name": "password", "type": "STRING", "mode": "NULLABLE"}
+]
