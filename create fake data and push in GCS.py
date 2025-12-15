@@ -8,7 +8,7 @@ from google.cloud import storage
 # Set the path to your service account JSON key
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r"C:\Users\LENOVO\Downloads\dataform-460508-8560b3c0cddc.json"
 
-# Configuration
+# Config
 project_name = 'dataform-460508'
 bucket_name = 'employe_data1'
 source_file_name = 'employee_data.csv'
@@ -43,7 +43,7 @@ with open(source_file_name, mode='w', newline='', encoding='utf-8') as file:
 
 print(f"✅ {num_employees} fake employee records created in {source_file_name}")
 
-# Upload CSV file to GCS
+# upload files in gcs bucket
 def upload_to_gcs(bucket_name, source_file_name, destination_blob_name, project):
     storage_client = storage.Client(project=project)
     bucket = storage_client.bucket(bucket_name)
@@ -51,7 +51,7 @@ def upload_to_gcs(bucket_name, source_file_name, destination_blob_name, project)
     blob.upload_from_filename(source_file_name)
     print(f'✅ File {source_file_name} uploaded to {destination_blob_name} in bucket {bucket_name}.')
 
-# Run uploaded function in this file
+# execute  uploaded functions
 upload_to_gcs(bucket_name, source_file_name, destination_blob_name, project_name)
 
 
