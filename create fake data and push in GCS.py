@@ -51,7 +51,7 @@ def upload_to_gcs(bucket_name, source_file_name, destination_blob_name, project)
     blob.upload_from_filename(source_file_name)
     print(f'✅ File {source_file_name} uploaded to {destination_blob_name} in bucket {bucket_name}.')
 
-# Run upload function
+# Run uploaded function in this file
 upload_to_gcs(bucket_name, source_file_name, destination_blob_name, project_name)
 
 
